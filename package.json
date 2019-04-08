@@ -1,12 +1,11 @@
 {
   "name": "brain-games-project-ulanivan",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "brain-games",
   "bin": {
     "brain-games": "dist/bin/brain-games.js"
-   },
-   "files": [
+  },
+  "files": [
     "dist"
   ],
   "scripts": {
@@ -24,7 +23,9 @@
     "url": "https://github.com/ulanivan/project-lvl1-s474/issues"
   },
   "homepage": "https://github.com/ulanivan/project-lvl1-s474#readme",
-  "dependencies": {},
+  "dependencies": {
+    "readline-sync": "^1.4.9"
+  },
   "devDependencies": {
     "@babel/cli": "^7.4.3",
     "@babel/core": "^7.4.3",
