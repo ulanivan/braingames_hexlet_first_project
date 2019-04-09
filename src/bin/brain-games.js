@@ -1,4 +1,4 @@
 #!/usr/bin/env node
-import nameQuestion from '..';
+import brainGames from '..';
 
-console.log(`Hello, ${nameQuestion}!`);
+brainGames();
