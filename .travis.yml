@@ -1,3 +1,10 @@
 language: node_js
 
-script: npx eslint src
+node_js:
+  - node
+
+script:
+  - make lint
+
+notifications:
+  email: false

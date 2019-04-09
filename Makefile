@@ -7,5 +7,7 @@ start:
 publish:
 	npm publish
 
+lint:
+	npx eslint src
 
 .PHONY: test
