@@ -1,13 +1,14 @@
 {
   "name": "brain-games-project-ulanivan",
-  "version": "1.2.0",
+  "version": "1.4.0",
   "description": "brain-games",
   "keywords": [
     "brain",
     "games"
   ],
   "bin": {
-    "brain-games": "dist/bin/brain-games.js"
+    "brain-games": "dist/bin/brain-games.js",
+    "brain-even": "dist/bin/brain-even.js"
   },
   "files": [
     "dist"
