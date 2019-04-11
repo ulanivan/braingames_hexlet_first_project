@@ -14,7 +14,7 @@ const calc = () => {
     const num1 = getRandom(1, 100);
     const num2 = getRandom(1, 100);
     const symbol = randomSymbol();
-    const randomExpression = `${num1} ${symbol} ${num2}`;
+    const randomExpression = `Question: ${num1} ${symbol} ${num2}`;
     const answerRandom = readlineSync.question(`${randomExpression}\n`);
     const resultExpression = () => {
       let result = 0;
@@ -26,6 +26,7 @@ const calc = () => {
     const correct = resultExpression() === Number(answerRandom);
     const notCorrect = resultExpression() !== Number(answerRandom);
     if (correct) {
+      console.log(`Your answer: ${resultExpression()}`);
       console.log('Correct!');
     }
     if (notCorrect) {
