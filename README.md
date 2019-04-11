@@ -7,3 +7,5 @@
 [![Build Status](https://travis-ci.org/ulanivan/project-lvl1-s474.svg?branch=master)](https://travis-ci.org/ulanivan/project-lvl1-s474)
 
 https://asciinema.org/a/d00SUE9ROsljnuzhpnKBecUBO
+
+https://asciinema.org/a/rLJih9onxV3EUbDBCsoEJ7hCp
