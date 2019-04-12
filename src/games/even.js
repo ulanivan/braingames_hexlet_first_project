@@ -1,6 +1,6 @@
 import readlineSync from 'readline-sync';
 
-const isEven = () => {
+const even = () => {
   const getRandom = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
   const description = 'Answer "yes" if number even otherwise answer "no".\n';
   const getName = readlineSync.question('May I have your name? ');
@@ -28,4 +28,4 @@ const isEven = () => {
   console.log(`Congratulations, ${getName}`);
 };
 
-export default isEven;
+export default even;
