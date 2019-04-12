@@ -1,12 +1,18 @@
 import readlineSync from 'readline-sync';
+import { 
+  cons, car, cdr,
+} from 'hexlet-pairs';
 import {
   descriptionTask, correct, result, notCorrect, answerRandom,
 } from './games/calc';
 
-
 const threeQuestions = 3;
+export const getRandom = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
+export const randomNumbers = cons(getRandom(1, 100), getRandom(1, 100));
+export const num1 = car(randomNumbers);
+export const num2 = cdr(randomNumbers);
 
-const core = () => {
+export const core = () => {
   const getName = readlineSync.question('May I have your name? ');
   console.log('Welcome to the Brain Games!');
   console.log(`${descriptionTask}`);
@@ -22,5 +28,3 @@ const core = () => {
   }
   console.log(`Congratulations, ${getName}`);
 };
-
-export default core;
