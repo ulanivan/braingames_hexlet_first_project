@@ -13,9 +13,10 @@ const getRandomSymbol = () => str.charAt(getRandom(0, str.length - 1));
 const symbol = getRandomSymbol();
 export const randomExpression = `Question: ${num1} ${symbol} ${num2}`;
 export const answerRandom = readlineSync.question(`${randomExpression}\n`);
+export const answerToNum = Number(answerRandom);
 export let result = 0;
-export const correct = result === Number(answerRandom);
-export const notCorrect = result !== Number(answerRandom);
+export const correct = () => result === answerToNum;
+export const notCorrect = () => result !== answerToNum;
 switch (symbol) {
   case '+':
     result = num1 + num2;

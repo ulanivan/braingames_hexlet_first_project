@@ -16,12 +16,14 @@ export const core = () => {
   const getName = readlineSync.question('May I have your name? ');
   console.log('Welcome to the Brain Games!');
   console.log(`${descriptionTask}`);
+  console.log(typeof (answerRandom));
+  console.log(typeof (result));
   for (let i = 1; i <= threeQuestions; i += 1) {
-    if (correct) {
+    if (correct()) {
       console.log(`Your answer: ${result}`);
       console.log('Correct!');
     }
-    if (notCorrect) {
+    if (notCorrect()) {
       console.log(`"${answerRandom}" is wrong answer ;(. Correct answer was "${result}" Let's try again, ${getName}!`);
       return;
     }
