@@ -1,13 +1,13 @@
 import readlineSync from 'readline-sync';
 import {
-  core, getRandom, num1, num2,
-} from '..';
+  cons, car, cdr,
+} from 'hexlet-pairs';
 
-export const calc = () => {
-  core();
-};
-
-export const descriptionTask = 'What is the result of the expression?\n';
+export const getRandom = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
+export const randomNumbers = cons(getRandom(1, 100), getRandom(1, 100));
+export const num1 = car(randomNumbers);
+export const num2 = cdr(randomNumbers);
+export const descriptionTask = ('What is the result of the expression?\n');
 const str = '+-*';
 const getRandomSymbol = () => str.charAt(getRandom(0, str.length - 1));
 const symbol = getRandomSymbol();

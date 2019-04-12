@@ -9,7 +9,7 @@ export const answerRandom = readlineSync.question(`${generateRandom}\n`);
 const isEvenRandom = ((generateRandom % 2) === 0);
 export const correct = (isEvenRandom === true && answerRandom === 'yes') || (isEvenRandom === false && answerRandom === 'no');
 export const notCorrect = (isEvenRandom === true && answerRandom === 'no') || (isEvenRandom === false && answerRandom === 'yes') || (answerRandom !== 'no' && answerRandom !== 'yes');
-export const correctAnswer = () => (isEvenRandom ? 'yes' : 'no');
+export const correctAnswer = (isEvenRandom ? 'yes' : 'no');
 
 const even = () => {
   core();
