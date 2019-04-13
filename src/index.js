@@ -1,26 +1,10 @@
 import readlineSync from 'readline-sync';
-import {
-  descriptionTask, result, answer, correct, notCorrect,
-} from './games/calc';
 
-const threeQuestions = 3;
-
-const core = () => {
-  console.log('Welcome to the Brain Games!');
-  console.log(descriptionTask);
-  const getName = readlineSync.question('May I have your name? ');
-  for (let i = 1; i <= threeQuestions; i += 1) {
-    console.log(answer);
-    if (correct()) {
-      console.log(`Your answer: ${result}`);
-      console.log('Correct!');
-    }
-    if (notCorrect()) {
-      console.log(`"${answer}" is wrong answer ;(. Correct answer was "${result}" Let's try again, ${getName}!`);
-      return;
-    }
-  }
-  console.log(`Congratulations, ${getName}`);
-};
-
-export default core;
+export const getRandom = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
+export const getName = readlineSync.question('May I have your name? ');
+export const welcome = () => console.log('Welcome to the Brain Games!');
+export const congratulation = () => console.log(`Congratulations, ${getName}`);
+export const printCorrect = () => console.log('Correct!');
+export const threeQuestions = 3;
+export const num1 = () => getRandom(1, 100);
+export const num2 = () => getRandom(1, 100);
