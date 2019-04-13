@@ -1,6 +1,6 @@
 
 import {
-  getName, welcome, congratulation, printCorrect, threeQuestions,
+  getName, welcome, congratulate, printCorrect, threeQuestions,
 } from '.';
 
 const core = (correct, notCorrect, answer, result, descriptionTask) => {
@@ -16,7 +16,7 @@ const core = (correct, notCorrect, answer, result, descriptionTask) => {
       return;
     }
   }
-  congratulation();
+  congratulate();
 };
 
 export default core;
