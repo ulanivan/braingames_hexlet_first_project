@@ -7,6 +7,9 @@ even:
 calc:
 	npx babel-node src/bin/brain-calc.js
 
+gcd:
+	npx babel-node src/bin/brain-gcd.js	
+
 publish:
 	npm publish
 
