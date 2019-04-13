@@ -1,19 +1,17 @@
-import readlineSync from 'readline-sync';
-import {
-  getRandom,
-} from '..';
+import getRandom from '..';
 import core from '../core';
 
+const descriptionTask = 'What is the result of the expression?\n';
+const sings = '+-*';
+
 const calc = () => {
-  const descriptionTask = 'What is the result of the expression?\n';
-  const characters = '+-*';
-  const getRandomSymbol = () => characters.charAt(getRandom(0, characters.length - 1));
-  const randomChar = getRandomSymbol();
+  const getRandomSymbol = () => sings.charAt(getRandom(0, sings.length - 1));
+  const char = getRandomSymbol();
   const num1 = getRandom(1, 50);
   const num2 = getRandom(1, 50);
-  const answer = readlineSync.question(`Question: ${num1} ${randomChar} ${num2}\n`);
+  const question = `Question: ${num1} ${char} ${num2}\n`;
   let result = 0;
-  switch (randomChar) {
+  switch (char) {
     case '+':
       result = num1 + num2;
       break;
@@ -24,11 +22,9 @@ const calc = () => {
       result = num1 * num2;
       break;
     default:
-      result = 0;
+      result = '';
   }
-  const correct = result === Number(answer);
-  const notCorrect = result !== Number(answer);
-  core(correct, notCorrect, answer, result, descriptionTask);
+  core(question, String(result), descriptionTask);
 };
 
 export default calc;

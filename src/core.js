@@ -1,22 +1,25 @@
+import readlineSync from 'readline-sync';
 
-import {
-  getName, welcome, congratulate, printCorrect, threeQuestions,
-} from '.';
+const threeQuestions = 3;
 
-const core = (correct, notCorrect, answer, result, descriptionTask) => {
-  welcome();
+const core = (question, result, descriptionTask) => {
+  const getName = readlineSync.question('May I have your name? ');
+  console.log('Welcome to the Brain Games!');
   console.log(descriptionTask);
   for (let i = 1; i <= threeQuestions; i += 1) {
+    const answer = readlineSync.question(question);
+    const correct = result === answer;
+    const notCorrect = result !== answer;
     if (correct) {
       console.log(`Your answer: ${answer}`);
-      printCorrect();
+      console.log('Correct!');
     }
     if (notCorrect) {
-      console.log(`"${answer}" is wrong answer ;(. Correct answer was "${result}" Let's try again, ${getName}!`);
+      console.log(`"${answer}" is wrong answer ;(. Correct answer was "${result}"\nLet's try again, ${getName}!`);
       return;
     }
   }
-  congratulate();
+  console.log(`Congratulations, ${getName}`);
 };
 
 export default core;
