@@ -1,20 +1,20 @@
 # project-lvl1-s474
 
 ## Install
-<hr>
 
 sudo npm install -g brain-games-project-ulanivan
 
-## Running games
-<hr>
+## Running and description games 
 
-<a href="https://asciinema.org/a/d00SUE9ROsljnuzhpnKBecUBO">brain-even</a>
+<a href="https://asciinema.org/a/d00SUE9ROsljnuzhpnKBecUBO">brain-even</a> - check even number
 
-<a href="https://asciinema.org/a/rLJih9onxV3EUbDBCsoEJ7hCp">brain-calc</a>
+<a href="https://asciinema.org/a/rLJih9onxV3EUbDBCsoEJ7hCp">brain-calc</a> - calculate the result of the expression
 
-<a href="https://asciinema.org/a/DpyhwNbRpco8kYR7QahrIRsvN">brain-progression</a>
+<a href="https://asciinema.org/a/DpyhwNbRpco8kYR7QahrIRsvN">brain-gcd</a> - find the greatest divider
 
-<a href="https://asciinema.org/a/cok2TymU691xdZFZrHYjSwNPB">brain-prime</a>
+<a href="https://asciinema.org/a/rUcVvaKnN8gGMgvUQYkNQrWwe">brain-progression</a>
+
+<a href="https://asciinema.org/a/cok2TymU691xdZFZrHYjSwNPB">brain-prime</a> - check prime
 
 <a href="https://codeclimate.com/github/ulanivan/project-lvl1-s474/maintainability"><img src="https://api.codeclimate.com/v1/badges/1d7cc344be34a02206ce/maintainability" /></a>
 
