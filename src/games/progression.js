@@ -1,7 +1,7 @@
 import getRandom from '../utils';
 import core from '..';
 
-const descriptionTask = 'What number is missing in the progression?\n';
+const descriptionTask = () => 'What number is missing in the progression?\n';
 const firstNum = getRandom(1, 10);
 const diff = getRandom(1, 7);
 
@@ -18,7 +18,9 @@ const randomSequenceOfNumbers = () => {
 
 const getTask = () => `${randomSequenceOfNumbers()}`;
 
-const getResult = () => firstNum + diff;
+console.log(randomSequenceOfNumbers().length);
+
+const getResult = () => String(firstNum + diff * ((randomSequenceOfNumbers().length) - 1));
 
 const findNum = () => {
   core(getTask, getResult, descriptionTask);
