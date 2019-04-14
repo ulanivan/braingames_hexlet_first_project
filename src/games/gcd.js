@@ -1,5 +1,5 @@
-import core from '../core';
-import getRandom from '..';
+import getRandom from '../utils';
+import core from '..';
 
 const findGcd = (x, y) => {
   if (y > x) return findGcd(y, x);
@@ -12,7 +12,7 @@ const num1 = getRandom(1, 100);
 const num2 = getRandom(1, 100);
 
 const playGcd = () => {
-  const question = `Question: ${num1} ${num2}\n`;
+  const question = `${num1} ${num2}`;
   const result = findGcd(num1, num2);
   core(question, String(result), descriptionTask);
 };
