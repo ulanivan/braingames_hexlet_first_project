@@ -3,18 +3,21 @@ import core from '..';
 
 const findGcd = (x, y) => {
   if (y > x) return findGcd(y, x);
-  if (!y) return x;
+  if (!y) return String(x);
   return findGcd(y, x % y);
 };
 
 const descriptionTask = 'Find the greatest common divisor of given numbers.\n';
-const num1 = getRandom(1, 100);
-const num2 = getRandom(1, 100);
+
+const getTask = () => `${getRandom(1, 100)} ${getRandom(1, 100)}`;
+
+const getResult = (question) => {
+  const nums = question.split(' ');
+  return findGcd(nums[0], nums[1]);
+};
 
 const playGcd = () => {
-  const question = `${num1} ${num2}`;
-  const result = findGcd(num1, num2);
-  core(question, String(result), descriptionTask);
+  core(getTask, getResult, descriptionTask);
 };
 
 export default playGcd;

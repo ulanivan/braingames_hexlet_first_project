@@ -5,9 +5,10 @@ const descriptionTask = 'What number is missing in the progression?\n';
 const firstNum = getRandom(1, 10);
 const diff = getRandom(1, 7);
 
+
 const randomSequenceOfNumbers = () => {
-  let result = firstNum;
   const arr = [`${firstNum}`];
+  let result = firstNum;
   while (arr.length < 10) {
     result += diff;
     arr.push(` ${result}`);
@@ -16,7 +17,7 @@ const randomSequenceOfNumbers = () => {
   return arr;
 };
 
-//const serialNum = firstNum + diff(findSerialNum - 1);
+//const serialNum = firstNum + diff * hide;
 
 const findNum = () => {
   const result = 10;

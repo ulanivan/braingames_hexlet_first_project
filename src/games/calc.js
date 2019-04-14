@@ -3,15 +3,17 @@ import core from '..';
 
 const descriptionTask = 'What is the result of the expression?\n';
 const sings = '+-*';
-const num1 = getRandom(1, 50);
-const num2 = getRandom(1, 50);
 
-const calc = () => {
-  const getRandomSymbol = () => sings.charAt(getRandom(0, sings.length - 1));
-  const char = getRandomSymbol();
-  const question = `${num1} ${char} ${num2}`;
-  let result = 0;
-  switch (char) {
+const getRandomSymbol = () => sings.charAt(getRandom(0, sings.length - 1));
+const getTask = () => `${getRandom(1, 100)} ${getRandomSymbol()} ${getRandom(1, 100)}`;
+
+const getResult = (question) => {
+  const nums = question.split(' ');
+  const num1 = Number(nums[0]);
+  const num2 = Number(nums[2]);
+  const symb = nums[1];
+  let result;
+  switch (symb) {
     case '+':
       result = num1 + num2;
       break;
@@ -22,9 +24,13 @@ const calc = () => {
       result = num1 * num2;
       break;
     default:
-      result = '+';
+      result = '';
   }
-  core(question, String(result), descriptionTask);
+  return String(result);
+};
+
+const calc = () => {
+  core(getTask, getResult, descriptionTask);
 };
 
 export default calc;
