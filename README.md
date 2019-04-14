@@ -4,7 +4,9 @@
 
 sudo npm install -g brain-games-project-ulanivan
 
-## Running and description games 
+## Running and description games
+
+to start the game write to the console:
 
 <a href="https://asciinema.org/a/d00SUE9ROsljnuzhpnKBecUBO">brain-even</a> - check even number
 
@@ -12,7 +14,7 @@ sudo npm install -g brain-games-project-ulanivan
 
 <a href="https://asciinema.org/a/DpyhwNbRpco8kYR7QahrIRsvN">brain-gcd</a> - find the greatest divider
 
-<a href="https://asciinema.org/a/rUcVvaKnN8gGMgvUQYkNQrWwe">brain-progression</a>
+<a href="https://asciinema.org/a/rUcVvaKnN8gGMgvUQYkNQrWwe">brain-progression</a> - find what number is missing in the progression
 
 <a href="https://asciinema.org/a/cok2TymU691xdZFZrHYjSwNPB">brain-prime</a> - check prime
 
