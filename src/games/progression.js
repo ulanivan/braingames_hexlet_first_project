@@ -5,7 +5,6 @@ const descriptionTask = 'What number is missing in the progression?\n';
 const firstNum = getRandom(1, 10);
 const diff = getRandom(1, 7);
 
-
 const randomSequenceOfNumbers = () => {
   const arr = [`${firstNum}`];
   let result = firstNum;
@@ -17,12 +16,12 @@ const randomSequenceOfNumbers = () => {
   return arr;
 };
 
-//const serialNum = firstNum + diff * hide;
+const getTask = () => `${randomSequenceOfNumbers()}`;
+
+const getResult = () => firstNum + diff;
 
 const findNum = () => {
-  const result = 10;
-  const question = `Question: ${randomSequenceOfNumbers()}\n`;
-  core(question, String(result), descriptionTask);
+  core(getTask, getResult, descriptionTask);
 };
 
 export default findNum;
