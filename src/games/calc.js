@@ -3,11 +3,10 @@ import core from '..';
 
 const descriptionTask = () => 'What is the result of the expression?\n';
 const sings = '+-*';
-
 const getRandomSymbol = () => sings.charAt(getRandom(0, sings.length - 1));
-const getTask = () => `${getRandom(1, 100)} ${getRandomSymbol()} ${getRandom(1, 100)}`;
 
-const getResult = (question) => {
+const getTask = () => {
+  const question = `${getRandom(1, 100)} ${getRandomSymbol()} ${getRandom(1, 100)}`;
   const nums = question.split(' ');
   const num1 = Number(nums[0]);
   const num2 = Number(nums[2]);
@@ -26,11 +25,12 @@ const getResult = (question) => {
     default:
       result = '';
   }
-  return String(result);
+  result = String(result);
+  return { question, result };
 };
 
 const calc = () => {
-  core(getTask, getResult, descriptionTask);
+  core(getTask, descriptionTask);
 };
 
 export default calc;

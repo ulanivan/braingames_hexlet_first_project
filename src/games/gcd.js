@@ -9,15 +9,15 @@ const findGcd = (x, y) => {
 
 const descriptionTask = () => 'Find the greatest common divisor of given numbers.\n';
 
-const getTask = () => `${getRandom(1, 100)} ${getRandom(1, 100)}`;
-
-const getResult = (question) => {
+const getTask = () => {
+  const question = `${getRandom(1, 100)} ${getRandom(1, 100)}`;
   const nums = question.split(' ');
-  return String(findGcd(nums[0], nums[1]));
+  const result = String(findGcd(nums[0], nums[1]));
+  return { question, result };
 };
 
 const playGcd = () => {
-  core(getTask, getResult, descriptionTask);
+  core(getTask, descriptionTask);
 };
 
 export default playGcd;

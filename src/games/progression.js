@@ -2,28 +2,28 @@ import getRandom from '../utils';
 import core from '..';
 
 const descriptionTask = () => 'What number is missing in the progression?\n';
-const firstNum = getRandom(1, 10);
-const diff = getRandom(1, 7);
 
-const randomSequenceOfNumbers = () => {
-  const arr = [`${firstNum}`];
-  let result = firstNum;
+const getTask = () => {
+  const firstNum = getRandom(1, 10);
+  const diff = getRandom(1, 7);
+  const elementNumber = getRandom(1, 10);
+
+  let element = firstNum;
+  const arr = [element];
   while (arr.length < 10) {
-    result += diff;
-    arr.push(` ${result}`);
+    element += diff;
+    arr.push(String(element));
   }
-  arr.splice(getRandom(0, arr.length - 1), 1, ' .. ');
-  return arr;
+
+  const result = String(arr[elementNumber - 1]);
+  arr[elementNumber - 1] = ' .. ';
+  const question = arr.join(' ');
+
+  return { question, result };
 };
 
-const getTask = () => `${randomSequenceOfNumbers()}`;
-
-console.log(randomSequenceOfNumbers().length);
-
-const getResult = () => String(firstNum + diff * ((randomSequenceOfNumbers().length) - 1));
-
 const findNum = () => {
-  core(getTask, getResult, descriptionTask);
+  core(getTask, descriptionTask);
 };
 
 export default findNum;
