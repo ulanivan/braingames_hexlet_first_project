@@ -7,12 +7,13 @@ const findGcd = (x, y) => {
   return findGcd(y, x % y);
 };
 
-const descriptionTask = () => 'Find the greatest common divisor of given numbers.\n';
+const descriptionTask = 'Find the greatest common divisor of given numbers.\n';
 
 const getTask = () => {
-  const question = `${getRandom(1, 100)} ${getRandom(1, 100)}`;
-  const nums = question.split(' ');
-  const result = String(findGcd(nums[0], nums[1]));
+  const num1 = getRandom(1, 100);
+  const num2 = getRandom(1, 100);
+  const question = `${num1} ${num2}`;
+  const result = findGcd(num1, num2);
   return { question, result };
 };
 

@@ -6,13 +6,12 @@ const sings = '+-*';
 const getRandomSymbol = () => sings.charAt(getRandom(0, sings.length - 1));
 
 const getTask = () => {
-  const question = `${getRandom(1, 100)} ${getRandomSymbol()} ${getRandom(1, 100)}`;
-  const nums = question.split(' ');
-  const num1 = Number(nums[0]);
-  const num2 = Number(nums[2]);
-  const symb = nums[1];
+  const operationSymb = getRandomSymbol();
+  const num1 = getRandom(1, 100);
+  const num2 = getRandom(1, 100);
+  const question = `${num1} ${operationSymb} ${num2}`;
   let result;
-  switch (symb) {
+  switch (operationSymb) {
     case '+':
       result = num1 + num2;
       break;
@@ -25,7 +24,6 @@ const getTask = () => {
     default:
       result = '';
   }
-  result = String(result);
   return { question, result };
 };
 

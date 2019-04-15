@@ -1,4 +1,4 @@
 #!/usr/bin/env node
-import prime from '../games/prime';
+import checkIsPrimeNumber from '../games/prime';
 
-prime();
+checkIsPrimeNumber();
