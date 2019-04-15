@@ -12,7 +12,7 @@
 
 ## Running and description games
 
-### to start the game write to the console:
+#### to start the game write to the console:
 
 [brain-even](https://asciinema.org/a/d00SUE9ROsljnuzhpnKBecUBO) - check even number
 
@@ -22,4 +22,4 @@
 
 [brain-progression](https://asciinema.org/a/rUcVvaKnN8gGMgvUQYkNQrWwe) - find what number is missing in the progression
 
-[https://asciinema.org/a/cok2TymU691xdZFZrHYjSwNPB](brain-prime) - check prime
+[brain-prime](https://asciinema.org/a/cok2TymU691xdZFZrHYjSwNPB) - check prime
