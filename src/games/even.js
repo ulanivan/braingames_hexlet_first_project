@@ -1,7 +1,7 @@
 import getRandom from '../utils';
 import core from '..';
 
-const descriptionTask = 'Answer "yes" if number even otherwise answer "no".\n';
+const descriptionTask = 'Answer "yes" if number even otherwise answer "no".';
 const isEven = num => ((num % 2) === 0 ? 'yes' : 'no');
 
 const getTask = () => {
@@ -10,8 +10,6 @@ const getTask = () => {
   return { question, result };
 };
 
-const even = () => {
+export default () => {
   core(getTask, descriptionTask);
 };
-
-export default even;

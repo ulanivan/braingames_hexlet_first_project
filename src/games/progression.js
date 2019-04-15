@@ -1,9 +1,8 @@
 import getRandom from '../utils';
 import core from '..';
 
-const descriptionTask = 'What number is missing in the progression?\n';
+const descriptionTask = 'What number is missing in the progression?';
 const progressionLength = 10;
-
 
 const getTask = () => {
   const firstNum = getRandom(1, 10);
@@ -14,13 +13,11 @@ const getTask = () => {
     .fill('..')
     .map((item, i) => (elementNumber === i ? '..' : firstNum + diff * i))
     .join(' ');
-  const result = firstNum + diff * elementNumber;
+  const result = String(firstNum + diff * elementNumber);
 
   return { question, result };
 };
 
-const findNum = () => {
+export default () => {
   core(getTask, descriptionTask);
 };
-
-export default findNum;

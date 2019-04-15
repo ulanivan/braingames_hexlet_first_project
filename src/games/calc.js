@@ -1,7 +1,7 @@
 import getRandom from '../utils';
 import core from '..';
 
-const descriptionTask = 'What is the result of the expression?\n';
+const descriptionTask = 'What is the result of the expression?';
 const sings = '+-*';
 const getRandomSymbol = () => sings.charAt(getRandom(0, sings.length - 1));
 
@@ -22,13 +22,12 @@ const getTask = () => {
       result = num1 * num2;
       break;
     default:
-      result = '';
+      result = 'null';
   }
+  result = String(result);
   return { question, result };
 };
 
-const calc = () => {
+export default () => {
   core(getTask, descriptionTask);
 };
-
-export default calc;

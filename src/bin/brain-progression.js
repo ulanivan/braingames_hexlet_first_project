@@ -1,4 +1,4 @@
 #!/usr/bin/env node
-import findNum from '../games/progression';
+import runProgression from '../games/progression';
 
-findNum();
+runProgression();
