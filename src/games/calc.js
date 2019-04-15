@@ -1,7 +1,7 @@
 import getRandom from '../utils';
 import core from '..';
 
-const descriptionTask = () => 'What is the result of the expression?\n';
+const descriptionTask = 'What is the result of the expression?\n';
 const sings = '+-*';
 const getRandomSymbol = () => sings.charAt(getRandom(0, sings.length - 1));
 
