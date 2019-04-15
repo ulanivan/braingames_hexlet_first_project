@@ -14,12 +14,12 @@
 
 ### to start the game write to the console:
 
-    [brain-even](https://asciinema.org/a/d00SUE9ROsljnuzhpnKBecUBO) - check even number
+[brain-even](https://asciinema.org/a/d00SUE9ROsljnuzhpnKBecUBO) - check even number
 
-    [brain-calc](https://asciinema.org/a/rLJih9onxV3EUbDBCsoEJ7hCp) - calculate the result of the expression
+[brain-calc](https://asciinema.org/a/rLJih9onxV3EUbDBCsoEJ7hCp) - calculate the result of the expression
 
-    [brain-gcd](https://asciinema.org/a/DpyhwNbRpco8kYR7QahrIRsvN) - find the greatest divider
+[brain-gcd](https://asciinema.org/a/DpyhwNbRpco8kYR7QahrIRsvN) - find the greatest divider
 
-    [brain-progression](https://asciinema.org/a/rUcVvaKnN8gGMgvUQYkNQrWwe) - find what number is missing in the progression
+[brain-progression](https://asciinema.org/a/rUcVvaKnN8gGMgvUQYkNQrWwe) - find what number is missing in the progression
 
-    [https://asciinema.org/a/cok2TymU691xdZFZrHYjSwNPB](brain-prime) - check prime
+[https://asciinema.org/a/cok2TymU691xdZFZrHYjSwNPB](brain-prime) - check prime
