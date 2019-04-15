@@ -8,17 +8,13 @@ const progressionLength = 10;
 const getTask = () => {
   const firstNum = getRandom(1, 10);
   const diff = getRandom(1, 7);
-  const elementNumber = getRandom(1, progressionLength);
+  const elementNumber = getRandom(1, progressionLength - 1);
 
-  let element = firstNum;
-  const progression = [];
-  while (progression.length < progressionLength) {
-    element += diff;
-    progression.push(element);
-  }
-  const result = progression[elementNumber - 1];
-  progression[elementNumber - 1] = ' .. ';
-  const question = progression.join(' ');
+  const question = Array(progressionLength)
+    .fill('..')
+    .map((item, i) => (elementNumber === i ? '..' : firstNum + diff * i))
+    .join(' ');
+  const result = firstNum + diff * elementNumber;
 
   return { question, result };
 };
