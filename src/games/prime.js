@@ -21,4 +21,4 @@ const checkIsPrimeNumber = () => {
   core(getTask, descriptionTask);
 };
 
-export default checkIsPrimeNumber();
+export default checkIsPrimeNumber;
