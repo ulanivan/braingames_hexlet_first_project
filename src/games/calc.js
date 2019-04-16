@@ -10,22 +10,22 @@ const getTask = () => {
   const num1 = getRandom(1, 100);
   const num2 = getRandom(1, 100);
   const question = `${num1} ${operationSymb} ${num2}`;
-  let result;
+  let correctAnswer;
   switch (operationSymb) {
     case '+':
-      result = num1 + num2;
+      correctAnswer = num1 + num2;
       break;
     case '-':
-      result = num1 - num2;
+      correctAnswer = num1 - num2;
       break;
     case '*':
-      result = num1 * num2;
+      correctAnswer = num1 * num2;
       break;
     default:
-      result = 'null';
+      correctAnswer = 'null';
   }
-  result = String(result);
-  return { question, result };
+  correctAnswer = String(correctAnswer);
+  return { question, correctAnswer };
 };
 
 export default () => {

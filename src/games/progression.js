@@ -13,9 +13,9 @@ const getTask = () => {
     .fill('..')
     .map((item, i) => (elementNumber === i ? '..' : firstNum + diff * i))
     .join(' ');
-  const result = String(firstNum + diff * elementNumber);
+  const correctAnswer = String(firstNum + diff * elementNumber);
 
-  return { question, result };
+  return { question, correctAnswer };
 };
 
 export default () => {

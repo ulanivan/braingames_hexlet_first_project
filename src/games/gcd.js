@@ -13,8 +13,8 @@ const getTask = () => {
   const num1 = getRandom(1, 100);
   const num2 = getRandom(1, 100);
   const question = `${num1} ${num2}`;
-  const result = String(findGcd(num1, num2));
-  return { question, result };
+  const correctAnswer = String(findGcd(num1, num2));
+  return { question, correctAnswer };
 };
 
 export default () => {

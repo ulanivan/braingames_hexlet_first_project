@@ -10,11 +10,11 @@ const core = (getTask, descriptionTask) => {
   for (let i = 1; i <= amountQuestions; i += 1) {
     const task = getTask();
     const answer = readlineSync.question(`Question: ${task.question}\n`);
-    if (task.result === answer) {
+    if (task.correctAnswer === answer) {
       console.log(`Your answer: ${answer}`);
       console.log('Correct!');
     } else {
-      console.log(`"${answer}" is wrong answer ;(. Correct answer was "${task.result}"`);
+      console.log(`"${answer}" is wrong answer ;(. Correct answer was "${task.correctAnswer}"`);
       console.log(`Let's try again, ${getName}!`);
       return;
     }
